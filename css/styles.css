@@ -1,0 +1,248 @@
+/* =========================================
+   PALETA DE COLORES Y VARIABLES UI
+   ========================================= */
+:root {
+    /* Colores Principales */
+    --primary: #5F447B;
+    --primary-secondary: #9274AF;
+    --accent: #C8ABE6;
+    --bg-soft: #E4D3F3;
+    --surface: #FFFFFF;
+    
+    /* Colores Funcionales */
+    --success: #2EB867;
+    --warning: #D99A2B;
+    --error: #C94AAA;
+    --info: #3882A0;
+    
+    /* Textos y Fondos */
+    --text-main: #252028;
+    --text-muted: #6B6470;
+    --bg-general: #FBF7FA;
+    --borders: #E6E1E4;
+
+    /* Tipografía */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-general);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: 32px; font-weight: 700; line-height: 40px; }
+h2 { font-size: 26px; font-weight: 700; line-height: 34px; }
+h3 { font-size: 20px; font-weight: 600; line-height: 28px; }
+p { font-size: 16px; font-weight: 400; line-height: 24px; color: var(--text-muted); }
+.text-center { text-align: center; }
+.mt-4 { margin-top: 24px; }
+
+/* =========================================
+   ANIMACIONES AL HACER SCROLL
+   ========================================= */
+.reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: all 0.7s ease-out;
+}
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+.navbar {
+    position: fixed; top: 0; width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--borders);
+    z-index: 1000;
+}
+.nav-content {
+    max-width: 1200px; margin: 0 auto;
+    padding: 15px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-size: 20px; font-weight: 700; color: var(--primary); }
+.nav-links a {
+    text-decoration: none; color: var(--text-main);
+    margin-left: 24px; font-weight: 500; font-size: 14px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--primary); }
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn-nav, .btn-primary, .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 24px; border-radius: 12px;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-primary, .btn-nav {
+    background-color: var(--primary); color: var(--surface);
+}
+.btn-primary:hover, .btn-nav:hover { background-color: var(--primary-secondary); }
+
+.btn-secondary {
+    background-color: var(--surface); color: var(--primary);
+    border: 2px solid var(--surface);
+}
+.btn-secondary:hover { background-color: transparent; color: var(--surface); }
+
+.btn-primary svg, .btn-secondary svg { width: 20px; height: 20px; margin-right: 8px; }
+
+/* =========================================
+   SECCIÓN HERO Y EFECTOS PARALLAX
+   ========================================= */
+.parallax-hero {
+    background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 140px; /* Compensa la barra de navegación */
+}
+
+.parallax-banner {
+    background-image: url('https://images.unsplash.com/photo-1551076805-e1869043e560?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(95, 68, 123, 0.88); /* Color --primary con transparencia */
+    z-index: 1;
+}
+
+.hero {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 120px 40px 80px; min-height: 85vh; gap: 40px;
+}
+.hero-content, .hero-image, .relative-z { position: relative; z-index: 2; }
+.hero-content { flex: 1; }
+.hero-image { flex: 1; display: flex; justify-content: center; }
+
+.badge-hero {
+    background-color: var(--accent); color: var(--primary);
+    padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 700;
+    display: inline-block; margin-bottom: 16px;
+}
+.hero h1 { font-size: 48px; line-height: 1.1; color: var(--surface); margin-bottom: 24px; }
+.hero p { font-size: 18px; margin-bottom: 32px; color: var(--surface); opacity: 0.95; }
+.download-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* =========================================
+   SECCIÓN: EL PROBLEMA
+   ========================================= */
+.problem-section {
+    background-color: var(--primary-secondary); color: var(--surface);
+    padding: 80px 20px; text-align: center;
+}
+.problem-section h2 { color: var(--surface); margin-bottom: 24px; }
+.problem-section p { color: var(--surface); opacity: 0.95; font-size: 18px; margin-bottom: 20px; }
+.container-narrow { max-width: 800px; margin: 0 auto; }
+
+/* =========================================
+   SECCIÓN: BENEFICIOS
+   ========================================= */
+.features-section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+.section-title { color: var(--primary); margin-bottom: 50px; font-size: 32px;}
+
+.grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+.card {
+    background: var(--surface); padding: 32px 24px;
+    border-radius: 16px; border: 1px solid var(--borders);
+    box-shadow: 0 4px 16px rgba(95, 68, 123, 0.06);
+    text-align: left; transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.card-icon { font-size: 32px; margin-bottom: 16px; }
+.card h3 { color: var(--text-main); margin-bottom: 12px; }
+
+/* =========================================
+   SHOWCASE DE PANTALLAS
+   ========================================= */
+.showcase { padding: 80px 20px 120px; max-width: 1200px; margin: 0 auto; }
+.showcase .section-title { text-align: center; margin-bottom: 80px; }
+
+.showcase-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 80px; gap: 60px;
+}
+.showcase-row.reverse { flex-direction: row-reverse; }
+
+.showcase-text { flex: 1; }
+.showcase-text .badge {
+    background: var(--bg-soft); color: var(--primary);
+    padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 14px;
+    display: inline-block; margin-bottom: 16px;
+}
+.showcase-text h3 { font-size: 32px; color: var(--primary); margin-bottom: 20px; }
+.feature-list { list-style: none; padding: 0; }
+.feature-list li { margin-bottom: 12px; font-weight: 500; color: var(--text-main); }
+
+.showcase-image { flex: 1; display: flex; justify-content: center; }
+
+/* MAQUETA DE TELÉFONO */
+.phone-mockup {
+    width: 290px; height: 600px;
+    border: 12px solid var(--text-main);
+    border-radius: 36px;
+    background-color: var(--bg-general);
+    position: relative;
+    overflow: hidden;
+}
+.phone-mockup::before {
+    content: ''; position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%); width: 110px; height: 25px;
+    background: var(--text-main); 
+    border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;
+    z-index: 2;
+}
+.shadow-mockup { box-shadow: 0 20px 40px rgba(95, 68, 123, 0.15); }
+
+/* =========================================
+   SECCIÓN: CONFIANZA Y SEGURIDAD (Parallax)
+   ========================================= */
+.trust-section { padding: 100px 20px; }
+.light-text { color: var(--surface) !important; }
+.trust-section h2 { margin-bottom: 24px; font-size: 32px; }
+.trust-section p { font-size: 18px; opacity: 0.95; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer { background: var(--text-main); color: var(--surface); padding: 40px 20px; text-align: center; }
+footer h3 { color: var(--bg-soft); margin-bottom: 8px; }
+footer p { color: var(--text-muted); font-size: 14px; margin: 0; }
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+@media (max-width: 900px) {
+    .hero { flex-direction: column; text-align: center; padding: 120px 20px 60px; }
+    .hero-content { order: 1; } .hero-image { order: 2; }
+    .download-buttons { justify-content: center; }
+    .showcase-row, .showcase-row.reverse { flex-direction: column; text-align: center; gap: 40px; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 36px; line-height: 44px; }
+}

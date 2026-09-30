@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDMAP - Tu salud en un solo lugar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">MEDMAP</div>
+            <div class="nav-links">
+                <a href="#problema">El Reto</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#pantallas">App</a>
+                <a href="#descarga" class="btn-nav">Descargar ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Con Parallax) -->
+    <section class="hero parallax-hero reveal">
+        <div class="parallax-overlay"></div>
+        <div class="hero-content">
+            <span class="badge-hero">App de Salud Inteligente</span>
+            <h1>Tu salud, siempre acompañada</h1>
+            <p>Toma el control de tus mediciones y tratamientos médicos. La aplicación que te conecta con tu cuidador y tu médico en tiempo real, totalmente adaptada a tus necesidades.</p>
+            
+            <div class="download-buttons">
+                <a href="#descarga" class="btn-primary">
+                    <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                    App Store
+                </a>
+                <a href="#descarga" class="btn-secondary">
+                    <svg viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                    Google Play
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+             <div class="phone-mockup">
+                 <img src="tu-pantalla-inicio.jpg" alt="Pantalla de inicio MEDMAP" style="width: 100%; height: 100%; object-fit: cover;">
+             </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: EL PROBLEMA -->
+    <section id="problema" class="problem-section reveal fade-up">
+        <div class="container-narrow">
+            <h2>¿Qué pasa cuando sales del consultorio?</h2>
+            <p>Entre una consulta y la siguiente, los pacientes suelen quedarse solos con su receta médica. Esta falta de acompañamiento tiene consecuencias reales: en México, el <strong>65.6% de las prescripciones en adultos mayores resultan inapropiadas</strong>, y el <strong>88% de las hospitalizaciones</strong> por reacciones adversas a medicamentos en este sector son totalmente prevenibles.</p>
+            <p>Además, millones de personas quedan fuera del sistema de salud simplemente por barreras de idioma. Nuestra aplicación nace para cambiar esto.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: BENEFICIOS PRINCIPALES -->
+    <section id="beneficios" class="features-section">
+        <h2 class="section-title reveal">Tecnología humana para tu bienestar</h2>
+        <div class="grid">
+            <div class="card reveal fade-up">
+                <div class="card-icon" style="color: var(--primary)">👥</div>
+                <h3>Tu cuidador, tu primera línea</h3>
+                <p>La aplicación no solo te avisa a ti. Si omites dos tomas o tus mediciones marcan una alerta, el sistema notifica inmediatamente a tu familiar o cuidador asignado.</p>
+            </div>
+            <div class="card reveal fade-up" style="transition-delay: 0.1s;">
+                <div class="card-icon" style="color: var(--primary)">📸</div>
+                <h3>Revisión inteligente (MEDMAP)</h3>
+                <p>Toma una foto de tu receta médica. El sistema detecta alergias, interacciones y dosis basándose estrictamente en las Guías de Práctica Clínica mexicanas.</p>
+            </div>
+            <div class="card reveal fade-up" style="transition-delay: 0.2s;">
+                <div class="card-icon" style="color: var(--primary)">🌐</div>
+                <h3>Inclusión sin barreras</h3>
+                <p>Tu salud en tu idioma. Interfaz adaptada con pictogramas y mensajes de voz validados en Español, Inglés y Hñähñu (Otomí).</p>
+            </div>
+            <div class="card reveal fade-up" style="transition-delay: 0.3s;">
+                <div class="card-icon" style="color: var(--primary)">🛡️</div>
+                <h3>Vigilancia especializada</h3>
+                <p>Tres programas de cuidado adaptados: embarazo y puerperio, enfermedades crónicas y cuidado del adulto mayor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE DE PANTALLAS -->
+    <section id="pantallas" class="showcase">
+        <h2 class="section-title reveal">Diseño claro y accesible</h2>
+        
+        <div class="showcase-row reveal">
+            <div class="showcase-text">
+                <span class="badge">Tratamientos</span>
+                <h3>Gestión Visual de Medicamentos</h3>
+                <p>Observa tu lista de medicamentos de forma ordenada. Sabrás exactamente qué tomar, en qué dosis y a qué hora mediante tarjetas detalladas e iconografía intuitiva.</p>
+                <ul class="feature-list">
+                    <li>✓ Tarjetas detalladas con dosis exactas</li>
+                    <li>✓ Iconografía intuitiva y legible</li>
+                    <li>✓ Reproductor de audio para indicaciones</li>
+                </ul>
+            </div>
+            <div class="showcase-image">
+                <div class="phone-mockup shadow-mockup">
+                    <img src="tu-pantalla-medicamentos.jpg" alt="Pantalla Medicamentos" style="width: 100%; height: 100%; object-fit: cover; background: var(--surface);">
+                </div>
+            </div>
+        </div>
+
+        <div class="showcase-row reverse reveal">
+            <div class="showcase-text">
+                <span class="badge">Accesibilidad</span>
+                <h3>Traducción a Hñähñu</h3>
+                <p>Rompiendo la barrera del idioma, ofrecemos una experiencia de usuario donde el texto y el audio están 100% traducidos para comunidades indígenas, fomentando la inclusión tecnológica en salud.</p>
+                <ul class="feature-list">
+                    <li>✓ Selección rápida de idioma</li>
+                    <li>✓ Contraste ideal para lectura en pantalla</li>
+                    <li>✓ Voz nativa validada</li>
+                </ul>
+            </div>
+            <div class="showcase-image">
+                <div class="phone-mockup shadow-mockup">
+                    <img src="tu-pantalla-accesibilidad.jpg" alt="Pantalla Accesibilidad" style="width: 100%; height: 100%; object-fit: cover; background: var(--surface);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CONFIANZA Y SEGURIDAD (Banner Parallax) -->
+    <section class="trust-section parallax-banner reveal">
+        <div class="parallax-overlay"></div>
+        <div class="container-narrow relative-z text-center">
+            <h2 class="light-text">Inteligencia Artificial Ética y Segura</h2>
+            <p class="light-text">Sabemos que tus datos de salud son sensibles. Por eso, nuestra plataforma utiliza la Inteligencia Artificial de manera responsable: la tecnología lee y extrae la información para facilitarte la vida, pero <strong>las reglas clínicas son fijas y toda decisión final siempre debe ser confirmada por una persona</strong>.</p>
+            <p class="light-text mt-4">Cada alerta, límite de salud y evaluación de nuestra aplicación está fundamentada al 100% en las Normas Oficiales Mexicanas (NOM) para garantizar tu seguridad y la de los tuyos.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h3>MEDMAP</h3>
+            <p>Sistema de Seguimiento Inteligente • HackaTec 2026</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE ANIMACIONES SCROLL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            reveals.forEach(reveal => revealOnScroll.observe(reveal));
+        });
+    </script>
+</body>
+</html>
