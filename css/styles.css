@@ -77,6 +77,7 @@ p { font-size: 16px; font-weight: 400; line-height: 24px; color: var(--text-mute
 }
 .nav-links a:hover { color: var(--primary); }
 
+
 /* =========================================
    BOTONES
    ========================================= */
@@ -87,18 +88,36 @@ p { font-size: 16px; font-weight: 400; line-height: 24px; color: var(--text-mute
     transition: all 0.3s ease;
     cursor: pointer;
 }
-.btn-primary, .btn-nav {
-    background-color: var(--primary); color: var(--surface);
+
+/* Agregamos mayor especificidad e !important para forzar el texto blanco */
+.btn-primary, 
+.btn-nav,
+.nav-links a.btn-nav {
+    background-color: var(--primary); 
+    color: #FFFFFF !important; 
 }
-.btn-primary:hover, .btn-nav:hover { background-color: var(--primary-secondary); }
+
+.btn-primary:hover, 
+.btn-nav:hover,
+.nav-links a.btn-nav:hover { 
+    background-color: var(--primary-secondary); 
+    color: #FFFFFF !important; 
+}
 
 .btn-secondary {
-    background-color: var(--surface); color: var(--primary);
+    background-color: var(--surface); 
+    color: var(--primary);
     border: 2px solid var(--surface);
 }
-.btn-secondary:hover { background-color: transparent; color: var(--surface); }
 
-.btn-primary svg, .btn-secondary svg { width: 20px; height: 20px; margin-right: 8px; }
+.btn-secondary:hover { 
+    background-color: transparent; 
+    color: var(--surface); 
+}
+
+.btn-primary svg, .btn-secondary svg { 
+    width: 20px; height: 20px; margin-right: 8px; 
+}
 
 /* =========================================
    SECCIÓN HERO Y EFECTOS PARALLAX
@@ -245,4 +264,32 @@ footer p { color: var(--text-muted); font-size: 14px; margin: 0; }
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .hero h1 { font-size: 36px; line-height: 44px; }
+}
+
+/* =========================================
+   ESTILOS DEL LOGO SENDA
+   ========================================= */
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    text-decoration: none;
+}
+
+.logo-icon {
+    height: 36px; /* Altura ideal para el icono cuadrado */
+    width: auto;
+    border-radius: 8px; /* Ligero borde redondeado para que coincida con tu UI */
+    box-shadow: 0 2px 4px rgba(95, 68, 123, 0.1);
+}
+
+.logo-text {
+    height: 22px; /* Mantiene la proporción del texto respecto al icono */
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    /* En móviles, reducimos un poco el tamaño para que encaje bien */
+    .logo-icon { height: 30px; }
+    .logo-text { height: 18px; }
 }
